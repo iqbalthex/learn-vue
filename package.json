@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
+    "tw-dev": "npx tailwindcss -i ./src/assets/css/app.css -o ./dist/css/app.css --watch",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
@@ -15,6 +16,7 @@
     "@vitejs/plugin-vue": "^4.2.3",
     "eslint": "^8.45.0",
     "eslint-plugin-vue": "^9.15.1",
+    "tailwindcss": "^3.3.3",
     "vite": "^4.4.6"
   }
 }
