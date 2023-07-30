@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "tw-dev": "npx tailwindcss -i ./src/assets/css/app.css -o ./dist/css/app.css --watch",
+    "tw-dev": "npx tailwindcss -o ./dist/css/app.css --watch",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
