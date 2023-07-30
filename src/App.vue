@@ -2,6 +2,7 @@
 
 import { ref } from "vue";
 
+import ChatList from "./components/ChatList.vue";
 import ChatSummary from "./components/ChatSummary.vue";
 
 const chats = ref([
@@ -10,7 +11,7 @@ const chats = ref([
       name: "Iqbal", phone: "085156312621"
     },
     messages: [
-      { id: 1, sent: "2023-07-30T01:00:00", text: "lorem ipsum" },
+      { id: 1, sent: "2023-07-30T01:12:00", text: "lorem ipsum" },
       { id: 2, sent: "2023-07-30T02:00:00", text: "ipsum amet" },
       { id: 3, sent: "2023-07-30T03:00:00", text: "sit lorem" },
     ],
@@ -20,7 +21,7 @@ const chats = ref([
       name: "Arie", phone: "085156312321"
     },
     messages: [
-      { id: 1, sent: "2023-07-30T01:00:00", text: "lorem amet" },
+      { id: 1, sent: "2023-07-30T01:00:03", text: "lorem amet" },
       { id: 2, sent: "2023-08-30T02:00:00", text: "ipsum dolor" },
       { id: 3, sent: "2023-09-30T03:00:00", text: "dolor sit" },
     ],
@@ -37,30 +38,34 @@ const chats = ref([
   },
 ]);
 
+function openChat(chat) {
+  
+}
+
 </script>
 
 <template>
 <main class="bg-blue-200">
 
-<sidebar>
-  <side-header />
-  <side-nav>
-    <search-input />
-    <filter-btn />
-  </side-nav>
+<!-- <sidebar> -->
+  <!-- <side-header /> -->
+  <!-- <side-nav> -->
+    <!-- <search-input /> -->
+    <!-- <filter-btn /> -->
+  <!-- </side-nav> -->
 
-  <side-body>
-    <div data-chat-list style="background: #777">
+  <!-- <side-body> -->
+    <chat-list>
       <template v-for="chat in chats" :key="chat.id">
         <chat-summary
-          :sender="chat.user.name"
-          :lastSent="chat.messages[0].sent"
-          :lastMsg="chat.messages[0].text"
+          :sender="chat.user"
+          :lastMsg="chat.messages[0]"
+          @click="() => openChat(chat)"
           />
       </template>
-    </div>
-  </side-body>
-</sidebar>
+    </chat-list>
+  <!-- </side-body> -->
+<!-- </sidebar> -->
 
 <!-- <chat-box> -->
   <!-- <chat-header> -->
