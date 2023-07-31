@@ -2,8 +2,8 @@
 
 import { ref } from "vue";
 
-import ChatList from "./components/ChatList.vue";
-import ChatSummary from "./components/ChatSummary.vue";
+import TheSidebar from "./components/TheSidebar.vue";
+import ChatBox from "./components/ChatBox.vue";
 
 const chats = ref([
   { id: 1,
@@ -38,14 +38,14 @@ const chats = ref([
   },
 ]);
 
-function openChat(chat) {
-  
-}
-
 </script>
 
 <template>
-<main class="bg-blue-200">
+<main class="flex min-h-screen bg-blue-200">
+
+<TheSidebar />
+
+<ChatBox class="w-3/4 border border-black" />
 
 <!-- <sidebar> -->
   <!-- <side-header /> -->
@@ -55,15 +55,15 @@ function openChat(chat) {
   <!-- </side-nav> -->
 
   <!-- <side-body> -->
-    <chat-list>
-      <template v-for="chat in chats" :key="chat.id">
-        <chat-summary
-          :sender="chat.user"
-          :lastMsg="chat.messages[0]"
-          @click="() => openChat(chat)"
-          />
-      </template>
-    </chat-list>
+    <!-- <chat-list> -->
+      <!-- <template v-for="chat in chats" :key="chat.id"> -->
+        <!-- <chat-summary -->
+          <!-- :sender="chat.user" -->
+          <!-- :lastMsg="chat.messages[0]" -->
+          <!-- @click="() => openChat(chat)" -->
+          <!-- /> -->
+      <!-- </template> -->
+    <!-- </chat-list> -->
   <!-- </side-body> -->
 <!-- </sidebar> -->
 
