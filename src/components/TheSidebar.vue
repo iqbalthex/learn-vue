@@ -7,9 +7,9 @@ import SidebarBody from "./SidebarBody.vue";
 
 <template>
 
-<div class="flex flex-col w-1/4 border border-red-400">
+<div class="flex flex-col w-1/4 max-h-screen">
   <SidebarHead />
-  <!-- <SidebarBody /> -->
+  <SidebarBody />
 </div>
 
 </template>

@@ -1,6 +1,6 @@
 <script setup>
 
-import { ref } from "vue";
+import { provide, ref } from "vue";
 
 import TheSidebar from "./components/TheSidebar.vue";
 import ChatBox from "./components/ChatBox.vue";
@@ -28,6 +28,96 @@ const chats = ref([
   },
   { id: 3,
     user: {
+      name: "Arie", phone: "085156312321"
+    },
+    messages: [
+      { id: 1, sent: "2023-07-30T01:00:03", text: "lorem amet" },
+      { id: 2, sent: "2023-08-30T02:00:00", text: "ipsum dolor" },
+      { id: 3, sent: "2023-09-30T03:00:00", text: "dolor sit" },
+    ],
+  },
+  { id: 4,
+    user: {
+      name: "Arie", phone: "085156312321"
+    },
+    messages: [
+      { id: 1, sent: "2023-07-30T01:00:03", text: "lorem amet" },
+      { id: 2, sent: "2023-08-30T02:00:00", text: "ipsum dolor" },
+      { id: 3, sent: "2023-09-30T03:00:00", text: "dolor sit" },
+    ],
+  },
+  { id: 5,
+    user: {
+      name: "Maulana", phone: "085156312345"
+    },
+    messages: [
+      { id: 1, sent: "2023-07-30T01:00:00", text: "lorem sit" },
+      { id: 2, sent: "2023-07-30T12:00:00", text: "amet ipsum" },
+      { id: 3, sent: "2023-08-30T23:00:00", text: "sit dolor" },
+    ],
+  },
+  { id: 6,
+    user: {
+      name: "Maulana", phone: "085156312345"
+    },
+    messages: [
+      { id: 1, sent: "2023-07-30T01:00:00", text: "lorem sit" },
+      { id: 2, sent: "2023-07-30T12:00:00", text: "amet ipsum" },
+      { id: 3, sent: "2023-08-30T23:00:00", text: "sit dolor" },
+    ],
+  },
+  { id: 7,
+    user: {
+      name: "Maulana", phone: "085156312345"
+    },
+    messages: [
+      { id: 1, sent: "2023-07-30T01:00:00", text: "lorem sit" },
+      { id: 2, sent: "2023-07-30T12:00:00", text: "amet ipsum" },
+      { id: 3, sent: "2023-08-30T23:00:00", text: "sit dolor" },
+    ],
+  },
+  { id: 8,
+    user: {
+      name: "Maulana", phone: "085156312345"
+    },
+    messages: [
+      { id: 1, sent: "2023-07-30T01:00:00", text: "lorem sit" },
+      { id: 2, sent: "2023-07-30T12:00:00", text: "amet ipsum" },
+      { id: 3, sent: "2023-08-30T23:00:00", text: "sit dolor" },
+    ],
+  },
+  { id: 9,
+    user: {
+      name: "Maulana", phone: "085156312345"
+    },
+    messages: [
+      { id: 1, sent: "2023-07-30T01:00:00", text: "lorem sit" },
+      { id: 2, sent: "2023-07-30T12:00:00", text: "amet ipsum" },
+      { id: 3, sent: "2023-08-30T23:00:00", text: "sit dolor" },
+    ],
+  },
+  { id: 10,
+    user: {
+      name: "Maulana", phone: "085156312345"
+    },
+    messages: [
+      { id: 1, sent: "2023-07-30T01:00:00", text: "lorem sit" },
+      { id: 2, sent: "2023-07-30T12:00:00", text: "amet ipsum" },
+      { id: 3, sent: "2023-08-30T23:00:00", text: "sit dolor" },
+    ],
+  },
+  { id: 11,
+    user: {
+      name: "Maulana", phone: "085156312345"
+    },
+    messages: [
+      { id: 1, sent: "2023-07-30T01:00:00", text: "lorem sit" },
+      { id: 2, sent: "2023-07-30T12:00:00", text: "amet ipsum" },
+      { id: 3, sent: "2023-08-30T23:00:00", text: "sit dolor" },
+    ],
+  },
+  { id: 12,
+    user: {
       name: "Maulana", phone: "085156312345"
     },
     messages: [
@@ -38,6 +128,10 @@ const chats = ref([
   },
 ]);
 
+provide("chats", chats.value.map(chat =>
+  ({ id: chat.id, sender: chat.user, lastMsg: chat.messages[0] })
+));
+
 </script>
 
 <template>
@@ -45,7 +139,7 @@ const chats = ref([
 
 <TheSidebar />
 
-<ChatBox class="w-3/4 border border-black" />
+<!-- <Chat-Box class="w-3/4 border border-black" /> -->
 
 <!-- <sidebar> -->
   <!-- <side-header /> -->

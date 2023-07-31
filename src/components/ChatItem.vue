@@ -7,6 +7,7 @@ const props = defineProps({
   lastMsg: { type: Object, required: true },
 });
 
+
 const time = computed(() => {
   const date = new Date(props.lastMsg.sent);
 
@@ -23,16 +24,19 @@ const time = computed(() => {
 
 <template>
 
-<div class="flex w-1/5 p-2 gap-2 border-b border-slate-400">
+<div class="flex p-2 gap-2">
   <div>
-    <img src="./" alt="pict" class="" />
+    <img src="/" alt="pict" class="" />
   </div>
   <div class="w-full">
     <div class="flex justify-between">
-      <div>{{ sender.name }}</div>
-      <div>{{ time }}</div>
+      <span>{{ sender.name }}</span>
+      <span>{{ time }}</span>
     </div>
-    <div>{{ lastMsg.text }}</div>
+    <div class="flex justify-between">
+      <span>{{ lastMsg.text }}</span>
+      <span class="w-6 h-6 text-center rounded-full bg-lime-200">4</span>
+    </div>
   </div>
 </div>
 
