@@ -1,7 +1,7 @@
 <script setup>
 
 import ProfilePicture from "./ProfilePicture.vue";
-import TriDotIcon from "./TriDotIcon.vue";
+import TriDotIcon from "./icons/TriDotIcon.vue";
 
 </script>
 

@@ -5,8 +5,8 @@ defineProps([ "phone", "status" ]);
 </script>
 
 <template>
-  <div>
-    {{ phone }}
-    {{ status }}
+  <div class="flex flex-col">
+    <span>{{ phone }}</span>
+    <span>{{ status }}</span>
   </div>
 </template>

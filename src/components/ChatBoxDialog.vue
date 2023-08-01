@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  <div class="border border-black">Dialog</div>
+  <div class="">Dialog</div>
 </template>

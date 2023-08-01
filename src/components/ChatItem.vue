@@ -25,13 +25,14 @@ const time = computed(() => {
 
 <template>
 
+<!-- <div class="flex px-2 py-2.5 gap-2"> -->
 <div class="flex p-2 gap-2">
   <div>
     <img src="/" alt="pict" class="" />
   </div>
   <div class="w-full">
     <div class="flex justify-between">
-      <span>{{ sender.name }}</span>
+      <span>{{ sender.name || sender.phone }}</span>
       <span>{{ time }}</span>
     </div>
     <div class="flex justify-between">

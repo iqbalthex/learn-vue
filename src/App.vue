@@ -1,6 +1,6 @@
 <script setup>
 
-import { provide, readonly, ref } from "vue";
+import { /*beforeDestroy,*/ provide, readonly, ref } from "vue";
 import data from "./data/chats.json";
 
 import TheSidebar from "./components/TheSidebar.vue";
@@ -41,42 +41,7 @@ function listChat(chat) {
 
 <template>
 <main class="flex min-h-screen bg-blue-200">
-
-<TheSidebar />
-
-<ChatBox :chat="activeChat" />
-
-<!-- <chat-box> -->
-  <!-- <chat-header> -->
-    <!-- <destination-user> -->
-      <!-- <profile-pict /> -->
-      <!-- <div> -->
-        <!-- <user-phone /> -->
-        <!-- <user-status /> -->
-      <!-- </div> -->
-    <!-- </destination-user> -->
-
-    <!-- <search-btn /> -->
-    <!-- <tri-dot-btn /> -->
-  <!-- </chat-header> -->
-
-  <!-- <chat-body> -->
-    <!-- <template v-for="message in messages"> -->
-      <!-- <message-body :key="message.id"> -->
-        <!-- <message-text /> -->
-        <!-- <message-sent /> -->
-      <!-- </message-body> -->
-    <!-- </template> -->
-  <!-- </chat-body> -->
-
-  <!-- <chat-footer> -->
-    <!-- <emoji-btn /> -->
-    <!-- <plus-btn /> -->
-    <!-- <text-input /> -->
-    <!-- <mic-btn v-if="textEmpty" /> -->
-    <!-- <send-btn v-else /> -->
-  <!-- </chat-footer> -->
-<!-- </chat-box> -->
-
+  <TheSidebar />
+  <ChatBox :chat="activeChat" />
 </main>
 </template>

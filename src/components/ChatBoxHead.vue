@@ -6,14 +6,14 @@ defineProps({
 
 import ProfilePicture from "./ProfilePicture.vue";
 import UserInfo from "./UserInfo.vue";
-import SearchIcon from "./SearchIcon.vue";
-import TriDotIcon from "./TriDotIcon.vue";
+import SearchIcon from "./icons/SearchIcon.vue";
+import TriDotIcon from "./icons/TriDotIcon.vue";
 
 </script>
 
 <template>
   <div class="flex justify-between px-4 py-2 bg-gray-100">
-    <div class="flex gap-2 border border-black">
+    <div class="flex gap-2">
       <ProfilePicture />
       <UserInfo :phone="user?.phone" :status="user?.status" />
     </div>
