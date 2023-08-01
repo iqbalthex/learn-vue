@@ -35,7 +35,7 @@ const time = computed(() => {
     </div>
     <div class="flex justify-between">
       <span>{{ lastMsg.text }}</span>
-      <span class="w-6 h-6 text-center rounded-full bg-lime-200">4</span>
+      <span class="px-2 rounded-full bg-lime-600 text-white text-sm my-auto">4</span>
     </div>
   </div>
 </div>

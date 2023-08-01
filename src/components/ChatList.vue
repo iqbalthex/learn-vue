@@ -4,6 +4,7 @@ import { inject } from "vue";
 import ChatItem from "./ChatItem.vue";
 
 const chats = inject("chats", []);
+const openChat = inject("openChat");
 
 </script>
 
@@ -11,7 +12,7 @@ const chats = inject("chats", []);
 
 <div class="overflow-y-scroll h-full bg-gray-100">
   <div v-for="chat in chats" :key="chat.id" class="border-b border-black">
-    <ChatItem :sender="chat.sender" :lastMsg="chat.lastMsg" />
+    <ChatItem :sender="chat.sender" :lastMsg="chat.lastMsg" @click="openChat(chat.id)" />
   </div>
 </div>
 
