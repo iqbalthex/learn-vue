@@ -8,8 +8,10 @@ import ChatBox from "./components/ChatBox.vue";
 
 const chats = ref(data);
 const activeChat = ref();
+const user = ref({ id: 2, name: "Iqqbal", phone: "082139921940" });
 
 
+provide("user", readonly(user));
 provide("chats", chats.value.map(listChat));
 provide("openChat", readonly(ref(openChat)));
 

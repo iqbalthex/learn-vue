@@ -11,9 +11,9 @@ import ChatBoxFooter from "./ChatBoxFooter.vue";
 </script>
 
 <template>
-  <div class="w-full max-w-3/4 grid grid-rows-[4rem_auto_3.25rem]">
+  <div class="w-full max-w-3/4 grid grid-rows-[4rem_auto_3.25rem]" style="display: grid; grid-template-rows: 4rem 1fr 3.5rem">
     <ChatBoxHead :user="chat?.user" />
-    <ChatBoxDialog />
+    <ChatBoxDialog :messages="chat?.messages" />
     <ChatBoxFooter />
   </div>
 </template>
