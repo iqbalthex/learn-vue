@@ -1,3 +1,3 @@
 <template>
-  <svg class="m-auto" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.96 122.88"><path class="cls-1" d="M15,0A15,15,0,1,1,0,15,15,15,0,0,1,15,0Zm0,92.93a15,15,0,1,1-15,15,15,15,0,0,1,15-15Zm0-46.47a15,15,0,1,1-15,15,15,15,0,0,1,15-15Z"/></svg>
+  <svg class="m-auto" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M19 11h-6V5a1 1 0 0 0-2 0v6H5a1 1 0 0 0 0 2h6v6a1 1 0 0 0 2 0v-6h6a1 1 0 0 0 0-2z" /></svg>
 </template>

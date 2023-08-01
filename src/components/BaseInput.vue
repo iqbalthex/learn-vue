@@ -2,7 +2,7 @@
 
 const emit = defineEmits(["typing"]);
 
-import { computed, ref, watch } from "vue";
+import { ref, watch } from "vue";
 
 const textEmpty = ref("");
 let typingTimeout;
@@ -13,7 +13,7 @@ watch(textEmpty, (newValue, oldValue) => {
   if (newIsEmpty === oldIsEmpty) return;
 
   typingTimeout && clearTimeout(typingTimeout);
-  typingTimeout = setTimeout(() => emit("typing", newIsEmpty), 600);
+  typingTimeout = setTimeout(() => emit("typing", newIsEmpty), 250);
 });
 
 </script>

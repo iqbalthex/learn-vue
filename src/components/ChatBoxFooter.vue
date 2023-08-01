@@ -22,16 +22,16 @@ function updateButton(isEmpty) {
 
 <template>
   <div class="flex px-4 py-2 bg-gray-100">
-    <button class="w-12 border border-black">
+    <button class="w-12">
       <EmojiIcon />
     </button>
-    <button class="w-12 border border-black">
+    <button class="w-12">
       <PlusIcon />
     </button>
-    <button class="w-full border border-black">
+    <button class="w-full">
       <MessageInput @typing="updateButton" />
     </button>
-    <button class="w-12 border border-black">
+    <button class="w-12">
       <MicIcon v-if="textEmpty" />
       <SendIcon v-else />
     </button>
