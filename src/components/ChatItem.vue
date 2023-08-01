@@ -1,13 +1,14 @@
 <script setup>
 
-import { computed } from "vue";
-
 const props = defineProps({
   sender: { type: Object, required: true },
   lastMsg: { type: Object, required: true },
 });
 
+import { computed } from "vue";
 
+
+// Format minutes and seconds to `mm.ss`.
 const time = computed(() => {
   const date = new Date(props.lastMsg.sent);
 

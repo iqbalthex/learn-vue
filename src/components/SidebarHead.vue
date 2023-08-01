@@ -7,9 +7,9 @@ import TriDotIcon from "./TriDotIcon.vue";
 
 <template>
 
-<div class="flex justify-between items-center px-4 py-2 bg-gray-100">
+<div class="flex justify-between px-4 py-2 bg-gray-100">
   <ProfilePicture />
-  <button class="flex justify-center w-6">
+  <button class="w-6">
     <TriDotIcon />
   </button>
 </div>

@@ -11,8 +11,8 @@ const openChat = inject("openChat");
 <template>
 
 <div class="overflow-y-scroll h-full bg-gray-100">
-  <div v-for="chat in chats" :key="chat.id" class="border-b border-black">
-    <ChatItem :sender="chat.sender" :lastMsg="chat.lastMsg" @click="openChat(chat.id)" />
+  <div v-for="(chat, index) in chats" :key="chat.id" class="border-b border-black">
+    <ChatItem :sender="chat.sender" :lastMsg="chat.lastMsg" @click="openChat(index)" />
   </div>
 </div>
 

@@ -1,7 +1,7 @@
 [
   { "id": 1,
     "user": {
-      "name": "Iqbal", "phone": "085156312621"
+      "name": "Iqbal", "phone": "085156312621", "status": "online"
     },
     "messages": [
       { "id": 1, "sent": "2023-07-30T01:12:00", "text": "lorem ipsum" },
