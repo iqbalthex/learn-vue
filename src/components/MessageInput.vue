@@ -21,5 +21,5 @@ watch(textEmpty, (newValue, oldValue) => {
 </script>
 
 <template>
-  <BaseInput class="w-full" placeholder="Type a message..." v-model="textEmpty" />
+  <BaseInput class="w-full dark:text-white" placeholder="Type a message..." v-model="textEmpty" />
 </template>

@@ -9,7 +9,7 @@ import SearchIcon from "./icons/SearchIcon.vue";
 
 <div class="relative flex items-center">
   <SearchIcon class="absolute ms-2" />
-  <BaseInput class="w-full ps-12 bg-gray-100 focus:outline-none" placeholder="Search..." />
+  <BaseInput class="w-full ps-12 bg-wa-secondary focus:outline-none dark:text-white" placeholder="Search..." />
 </div>
 
 </template>

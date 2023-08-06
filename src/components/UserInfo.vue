@@ -6,7 +6,7 @@ defineProps([ "phone", "status" ]);
 
 <template>
   <div class="flex flex-col">
-    <span>{{ phone }}</span>
-    <span>{{ status }}</span>
+    <span class="dark:text-wa-dark-icon">{{ phone }}</span>
+    <span class="dark:text-wa-dark-icon">{{ status }}</span>
   </div>
 </template>

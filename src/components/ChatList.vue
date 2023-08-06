@@ -10,9 +10,12 @@ const openChat = inject("openChat");
 
 <template>
 
-<div class="overflow-y-scroll h-full bg-gray-100">
-  <div v-for="(chat, index) in chats" :key="chat.id" class="border-b border-slate-400">
-    <ChatItem :sender="chat.sender" :lastMsg="chat.lastMsg" @click="openChat(index)" />
+<div class="overflow-y-scroll h-full bg-wa-secondary dark:bg-wa-dark-dialog">
+  <div v-for="(chat, index) in chats" :key="chat.id">
+    <ChatItem
+      :sender="chat.sender"
+      :lastMsg="chat.lastMsg"
+      @click="openChat(index)" />
   </div>
 </div>
 

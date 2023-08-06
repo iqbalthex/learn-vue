@@ -8,7 +8,7 @@ import FilterIcon from "./icons/FilterIcon.vue";
 
 <template>
 
-<div class="flex p-2 gap-1 items-center border-b bg-white">
+<div class="flex p-2 gap-1 items-center bg-white dark:bg-wa-dark-dialog">
   <ChatSearch class="w-full" />
   <button>
     <FilterIcon />

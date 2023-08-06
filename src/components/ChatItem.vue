@@ -1,43 +1,55 @@
 <script setup>
 
 const props = defineProps({
-  sender: { type: Object, required: true },
-  lastMsg: { type: Object, required: true },
+  sender:  { type: Object },
+  lastMsg: { type: Object },
 });
 
 import { computed } from "vue";
 
 
-// Format minutes and seconds to `mm.ss`.
+// Format hours and minutes to `mm.ss`.
 const time = computed(() => {
   const date = new Date(props.lastMsg.sent);
 
+  let hours   = date.getHours();
   let minutes = date.getMinutes();
-  let seconds = date.getSeconds();
 
+  if (hours   < 10) hours   = "0" + hours;
   if (minutes < 10) minutes = "0" + minutes;
-  if (seconds < 10) seconds = "0" + seconds;
 
-  return `${minutes}.${seconds}`;
+  return `${hours}.${minutes}`;
+});
+
+const unreadCount = computed(() => {
+  return 0;
 });
 
 </script>
 
 <template>
 
-<!-- <div class="flex px-2 py-2.5 gap-2"> -->
-<div class="flex p-2 gap-2">
+<div class="flex px-2 py-2.5 gap-2 border-b-[1pt] dark:border-wa-dark-tertiary">
   <div>
     <img src="/" alt="pict" class="" />
   </div>
   <div class="w-full">
     <div class="flex justify-between">
-      <span>{{ sender.name || sender.phone }}</span>
-      <span>{{ time }}</span>
-    </div>
-    <div class="flex justify-between">
-      <span>{{ lastMsg.text }}</span>
-      <span class="px-2 rounded-full bg-lime-600 text-white text-sm my-auto">4</span>
+      <div>
+        <p class="dark:text-slate-400">{{ sender.name || sender.phone }}</p>
+        <p class="dark:text-slate-400">{{ lastMsg.text }}</p>
+      </div>
+
+      <div class="flex flex-col items-end">
+        <template v-if="unreadCount">
+          <p class="text-wa-primary dark:text-wa-dark-primary">{{ time }}</p>
+          <p class="my-auto px-2 rounded-full bg-wa-primary text-white text-sm dark:bg-wa-dark-primary dark:text-black">{{ unreadCount }}</p>
+        </template>
+        <template v-else>
+          <p class="dark:text-slate-400">{{ time }}</p>
+        </template>
+      </div>
+
     </div>
   </div>
 </div>

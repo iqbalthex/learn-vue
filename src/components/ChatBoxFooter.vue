@@ -21,7 +21,7 @@ function updateButton(isEmpty) {
 </script>
 
 <template>
-  <div class="flex px-4 py-2 bg-gray-100">
+  <div class="flex px-4 py-2 bg-wa-secondary dark:bg-wa-dark-secondary">
     <button class="w-12">
       <EmojiIcon />
     </button>

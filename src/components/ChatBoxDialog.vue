@@ -1,7 +1,7 @@
 <script setup>
 
 defineProps({
-  messages: { type: Array, default: () => [null] }
+  messages: { type: Array, default: () => [] }
 });
 
 import { inject } from "vue";
@@ -9,15 +9,15 @@ import { inject } from "vue";
 import OtherMessage from "./OtherMessage.vue";
 import SelfMessage from "./SelfMessage.vue";
 
-const user = inject("user");
+const userId = inject("user").id;
 
 </script>
 
 <template>
-  <div class="px-2 flex flex-col">
-    <template v-for="message in messages">
-      <SelfMessage v-if="message?.sender?.id === user?.id" />
-      <OtherMessage v-else />
+  <div class="max-w-[75vw] px-2 flex flex-col">
+    <template v-for="message in messages" :key="message.id">
+      <SelfMessage v-if="message.sender?.id === userId" :message="message" />
+      <OtherMessage v-else :message="message" />
     </template>
   </div>
 </template>
