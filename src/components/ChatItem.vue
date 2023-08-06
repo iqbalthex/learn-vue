@@ -6,7 +6,13 @@ const props = defineProps({
 });
 
 import { computed } from "vue";
+import PersonIcon from "./icons/PersonIcon.vue";
 
+// Clip messages
+const excerpt = computed(() => {
+  const msg = props.lastMsg.text.slice(0, 25);
+  return `${msg}...`;
+});
 
 // Format hours and minutes to `mm.ss`.
 const time = computed(() => {
@@ -30,14 +36,14 @@ const unreadCount = computed(() => {
 <template>
 
 <div class="flex px-2 py-2.5 gap-2 border-b-[1pt] dark:border-wa-dark-tertiary">
-  <div>
-    <img src="/" alt="pict" class="" />
+  <div class="p-1.5 border border-black rounded-full dark:border-wa-dark-icon">
+    <PersonIcon />
   </div>
   <div class="w-full">
     <div class="flex justify-between">
       <div>
         <p class="dark:text-slate-400">{{ sender.name || sender.phone }}</p>
-        <p class="dark:text-slate-400">{{ lastMsg.text }}</p>
+        <p class="dark:text-slate-400">{{ excerpt }}</p>
       </div>
 
       <div class="flex flex-col items-end">
