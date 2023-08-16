@@ -1,10 +1,12 @@
 <script>
 
-import Hooks from './components/Hooks.vue';
+import Expression from './components/Expression.vue';
+// import Hooks from './components/Hooks.vue';
 
 export default {
   components: {
-    Hooks,
+    Expression,
+    // Hooks,
   }
 }
 
@@ -12,6 +14,7 @@ export default {
 
 <template>
 
-<Hooks />
+<Expression />
+<!-- <Hooks /> -->
 
 </template>
