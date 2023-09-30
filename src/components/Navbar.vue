@@ -2,7 +2,7 @@
 
 import { ref } from 'vue';
 
-const navbarHidden = ref(false);
+const navbarHidden = ref(true);
 const activeLink = ref('home');
 
 function changeActive(id) {
@@ -17,7 +17,7 @@ function toggleNavbar() {
 
 <template>
 
-<header class="w-full px-4 py-3 lg:flex justify-stretch lg:pr-6 bg-violet-400 lg:justify-end">
+<header class="w-full px-4 py-3 justify-stretch bg-violet-400 sticky top-0 lg:flex lg:pr-6 lg:justify-end">
   <button @click="toggleNavbar" type="button" class="inline-flex p-2 text-gray-500 rounded-md lg:hidden hover:bg-purple-300 focus:outline-none focus:ring focus:ring-purple-300 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" /></svg>
   </button>
@@ -42,10 +42,10 @@ function toggleNavbar() {
         </a>
       </li>
       <li>
-        <a :class="{ active: activeLink === 'tech' }"
-          @click="changeActive('tech')"
-          href="#tech" class="link group">
-          Tech Stack
+        <a :class="{ active: activeLink === 'certificate' }"
+          @click="changeActive('certificate')"
+          href="#certificate" class="link group">
+          Certificate
           <span class="bottomline lg:group-hover:border-b-2"></span>
         </a>
       </li>
@@ -54,6 +54,14 @@ function toggleNavbar() {
           @click="changeActive('projects')"
           href="#projects" class="link group">
           Projects
+          <span class="bottomline lg:group-hover:border-b-2"></span>
+        </a>
+      </li>
+      <li>
+        <a :class="{ active: activeLink === 'contact' }"
+          @click="changeActive('contact')"
+          href="#contact" class="link group">
+          Contact
           <span class="bottomline lg:group-hover:border-b-2"></span>
         </a>
       </li>
@@ -75,7 +83,7 @@ function toggleNavbar() {
 }
 
 .link.active {
-  @apply text-violet-700 font-bold;
+  @apply text-cyan-300 font-bold lg:text-violet-700;
 }
 
 .link.active .bottomline {
