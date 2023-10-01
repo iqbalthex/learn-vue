@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <section id="home" class="flex min-h-screen p-4 pt-16 justify-around items-center bg-gray-200 lg:px-8">
+  <section id="home" class="flex min-h-screen p-4 pt-16 justify-around items-center bg-gray-200 dark:bg-gray-800 lg:px-8">
     <div class="p-4">
       <p class="text-xl">
         <b class="font-semibold">Hello, my name's</b>
