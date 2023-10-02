@@ -42,10 +42,10 @@ function toggleNavbar() {
         </a>
       </li>
       <li>
-        <a :class="{ active: activeLink === 'certificate' }"
-          @click="changeActive('certificate')"
-          href="#certificate" class="link group">
-          Certificate
+        <a :class="{ active: activeLink === 'certificates' }"
+          @click="changeActive('certificates')"
+          href="#certificates" class="link group">
+          Certificates
           <span class="bottomline lg:group-hover:border-b-2"></span>
         </a>
       </li>

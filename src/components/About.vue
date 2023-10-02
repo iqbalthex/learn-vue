@@ -5,8 +5,8 @@
 </script>
 
 <template>
-  <section id="about" class="flex flex-col min-h-screen px-4 pt-16 justify-around items-center bg-gray-200 lg:px-8 dark:bg-gray-800 border border-black">
-    <div class="px-4 py-4 mx-auto max-w-screen-xl lg:px-6">
+  <section id="about" class="flex flex-col min-h-screen px-4 justify-around items-center bg-gray-200 lg:px-8 dark:bg-gray-800 border border-black">
+    <div class="px-4 mx-auto max-w-screen-xl lg:px-6">
       <h2 class="mb-8 text-4xl text-center tracking-tight font-bold text-gray-900 dark:text-white">About me</h2>
       <div class="space-y-6 md:grid md:grid-cols-2 md:gap-16 md:space-y-0 text-lg">
         <div>
@@ -55,7 +55,7 @@
 }
 
 .p {
-  @apply text-gray-500 dark:text-gray-400;
+  @apply text-gray-600 dark:text-gray-400;
 }
 
 </style>

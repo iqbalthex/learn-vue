@@ -8,13 +8,6 @@
   },
   {
     "platform": "Dicoding",
-    "title": "Belajar Dasar Pemrograman JavaScript",
-    "img": "images/sertifikat_course-belajar_dasar_pemrograman_javascript.png",
-    "tagline": "Kuasai JavaScript",
-    "description": "Kuasai JavaScript sebagai bahasa pemrograman populer, mulai dari fundamental, sintaks dan fitur ES6, hingga konsep automation test menggunakan framework ternama."
-  },
-  {
-    "platform": "Dicoding",
     "title": "Belajar Membuat Front-End Web untuk Pemula",
     "img": "images/sertifikat_course-belajar_membuat_front_end_web_untuk_pemula.png",
     "tagline": "Buat Webmu Menjadi Interaktif",
