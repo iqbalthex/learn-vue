@@ -20,10 +20,7 @@
     </div>
     <div>
       <h4 class="font-semibold">My favorite tech stack (hexagon)</h4>
-      <ul>
-        <li>Laravel</li>
-        <li>Vue</li>
-      </ul>
+      
     </div>
   </section>
 </template>
