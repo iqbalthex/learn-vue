@@ -1,6 +1,9 @@
-import './assets/index.css'
-
 import { createApp } from 'vue'
-import App from './App.vue'
 
-createApp(App).mount('#app')
+import './main.css'
+import App from './App.vue'
+import routes from './routes'
+
+createApp(App)
+  .use(routes)
+  .mount('#app')
