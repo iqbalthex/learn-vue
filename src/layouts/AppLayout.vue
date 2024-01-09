@@ -41,12 +41,12 @@ function toggleSidebar() {
   </aside>
 
   <div class="flex flex-col w-full">
-    <header class="h-14 bg-rose-200">
+    <header class="h-14 bg-sky-400">
       <the-navbar v-bind="{ toggleSidebar, sidebarOpen }" />
     </header>
 
-    <main class="h-full px-4 lg:px-10 bg-slate-200">
-      <div class="h-full bg-slate-100">
+    <main class="h-full px-4 lg:px-10 bg-indigo-100">
+      <div class="h-full bg-indigo-200">
         <slot />
       </div>
     </main>

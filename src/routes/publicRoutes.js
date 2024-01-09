@@ -1,14 +1,22 @@
+const importPage = name => () => import(`@/pages/${name}.vue`)
+
 export default [
   {
     path: '/tes',
-    component: () => import('@/pages/TesPage.vue'),
+    component: importPage('TesPage'),
   },
   {
     path: '/admin',
-    component: () => import('@/pages/AdminPage.vue'),
+    component: importPage('AdminPage'),
   },
   {
     path: '/wind',
-    component: () => import('@/pages/WindToRosePage.vue'),
+    component: importPage('WindToRosePage'),
+    children: [
+      {
+        path: ':datasetId?',
+        component: importPage('Wind'),
+      },
+    ],
   },
 ]
