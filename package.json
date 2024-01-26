@@ -10,17 +10,19 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "vue": "^3.3.4",
+    "pinia": "^2.1.7",
+    "plotly.js-strict-dist-min": "^2.28.0",
+    "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@iconify/vue": "^4.1.1",
-    "@vitejs/plugin-vue": "^4.2.3",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8.45.0",
-    "eslint-plugin-vue": "^9.15.1",
-    "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.3",
-    "vite": "^4.4.6"
+    "@vitejs/plugin-vue": "^4.6.2",
+    "autoprefixer": "^10.4.17",
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.20.1",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "vite": "^4.5.2"
   }
 }

@@ -1,4 +1,6 @@
 <script setup>
+import { ref, onMounted } from 'vue'
+
 import AppLayout from '@/layouts/AppLayout.vue'
 </script>
 

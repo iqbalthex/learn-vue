@@ -1,27 +1,16 @@
 <script setup>
-import { reactive, provide } from 'vue'
-import { useRouter } from 'vue-router'
+import useWindStore from '@/stores/wind'
 
-import AppLayout from '@/layouts/AppLayout.vue'
-import windsData from '@/winds.json'
-
-const router = useRouter()
-const winds = reactive(windsData)
-
-provide('$winds', winds)
-
-function routeIs(path) {
-  return router.currentRoute.value.path === path
-}
+const winds = useWindStore()
 </script>
 
 <template>
   <div class="mb-2">
     <ul class="flex gap-x-1">
-      <li v-for="i in [1, 2, 3]" :key="i">
-        <router-link :to="`/wind/wind-${i}`" class="tab-btn"
-          :class="{ active: routeIs(`/wind/wind-${i}`) }">
-          Tab {{ i }}
+      <li v-for="dataset, index in winds.datasets" :key="index">
+        <router-link :to="`/wind/${dataset?.id}`" class="tab-btn"
+          :class="{ active: $route.path === `/wind/${dataset?.id}` }">
+          {{ dataset?.name || `Data ${index}` }}
         </router-link>
       </li>
     </ul>

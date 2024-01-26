@@ -1,8 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { Icon } from '@iconify/vue'
-
-import TheNavbar from '@/components/Navbar.vue'
+import VNavbar from '@/components/Navbar.vue'
 
 const sidebarOpen = ref(false)
 
@@ -42,7 +41,7 @@ function toggleSidebar() {
 
   <div class="flex flex-col w-full">
     <header class="h-14 bg-sky-400">
-      <the-navbar v-bind="{ toggleSidebar, sidebarOpen }" />
+      <v-navbar v-bind="{ toggleSidebar, sidebarOpen }" />
     </header>
 
     <main class="h-full px-4 lg:px-10 bg-indigo-100">

@@ -1,0 +1,6 @@
+[
+  { "name": "N", "bottom":   0, "top":  45 },
+  { "name": "E", "bottom":  45, "top": 135 },
+  { "name": "S", "bottom": 135, "top": 225 },
+  { "name": "W", "bottom": 225, "top": 315 }
+]
